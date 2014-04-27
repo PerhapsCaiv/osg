@@ -1715,7 +1715,8 @@ void EdgeCollapse::copyBackToGeometry()
     }
 
     _geometry->getPrimitiveSetList().clear();
-    _geometry->addPrimitiveSet(primitives);
+    if(primitives)
+        _geometry->addPrimitiveSet(primitives);
 
 }
 
